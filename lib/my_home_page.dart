@@ -20,7 +20,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Your BMI',
+          'Check Your BMI',
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.indigo,
