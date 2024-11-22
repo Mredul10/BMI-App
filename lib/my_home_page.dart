@@ -106,7 +106,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       var bmi = iwt / (tM * tM);
 
                       var msg = "";
-                     
 
                       if (bmi > 25) {
                         msg = "You are OverWeight";
@@ -128,11 +127,32 @@ class _MyHomePageState extends State<MyHomePage> {
                       });
                     }
                   },
-                  child: Text('Calculate',style: TextStyle(fontSize: 15),),
+                  child: Text(
+                    'Calculate',
+                    style: TextStyle(fontSize: 15),
+                  ),
                 ),
                 SizedBox(
                   height: 10,
                 ),
+                ElevatedButton(
+                  onPressed: () {
+                    setState(
+                      () {
+                        wtController.clear();
+                        ftController.clear();
+                        inController.clear();
+                        result = "";
+                        bgColor = null;
+                      },
+                    );
+                  },
+                  child: Text(
+                    'Clear',
+                    style: TextStyle(fontSize: 15),
+                  ),
+                ),
+                SizedBox(height: 10,),
                 Text(
                   result,
                   style: TextStyle(fontSize: 19),
@@ -145,5 +165,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
- 
